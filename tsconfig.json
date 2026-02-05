@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "types": ["jest", "node"]
   },
+ 
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

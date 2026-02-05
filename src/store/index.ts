@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import elevatorReducer from "./elevatorSlice";
+import elevatorReducer from "./elevatorReducer";
 
 export const store = configureStore({
   reducer: {
