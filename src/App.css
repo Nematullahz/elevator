@@ -24,8 +24,10 @@ body { background:#0f172a; color:white; }
   position:absolute;
   right:0;
   top:0;
+  left: 400px;
   width:200px;
   height:480px;
+  background-color: red;
 }
 
 .elevator {
