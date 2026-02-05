@@ -44,6 +44,20 @@ const slice = createSlice({
       best.targets.push(floor);
     },
 
+    addInternalTarget(
+      state,
+      action: PayloadAction<{ elevatorId: number; floor: number }>,
+    ) {
+      const { elevatorId, floor } = action.payload;
+
+      const elevator = state.elevators.find((e) => e.id === elevatorId);
+      if (!elevator) return;
+
+      if (!elevator.targets.includes(floor)) {
+        elevator.targets.push(floor);
+      }
+    },
+
     step(state) {
       state.elevators.forEach((e) => {
         if (!e.targets.length) return;
@@ -66,5 +80,5 @@ const slice = createSlice({
   },
 });
 
-export const { callElevator, step } = slice.actions;
+export const { callElevator, step, addInternalTarget } = slice.actions;
 export default slice.reducer;

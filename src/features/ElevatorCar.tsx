@@ -1,4 +1,5 @@
 import type { Elevator } from "../store/elevatorReducer";
+import InternalPanel from "./InternalPanel";
 export default function ElevatorCar({ elevator }: { elevator: Elevator }) {
   const y = (5 - elevator.currentFloor) * 80;
 
@@ -12,6 +13,7 @@ export default function ElevatorCar({ elevator }: { elevator: Elevator }) {
     >
       <div className={`door ${elevator.door}`} />
       <span>{elevator.currentFloor}</span>
+      <InternalPanel elevatorId={elevator.id} />
     </div>
   );
 }

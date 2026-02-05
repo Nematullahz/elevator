@@ -45,3 +45,26 @@ body { background:#0f172a; color:white; }
 .door.closed { background:#333; }
 
 .queue { border:1px solid white; padding:10px; }
+
+.panelInside {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  display: grid;
+  grid-template-columns: repeat(3, 18px);
+  gap: 4px;
+}
+
+.panelInside button {
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  background: #111;
+  color: white;
+  border: 1px solid #444;
+  cursor: pointer;
+}
+
+.panelInside button:hover {
+  background: #38bdf8;
+}
