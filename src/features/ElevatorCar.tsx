@@ -12,7 +12,9 @@ export default function ElevatorCar({ elevator }: { elevator: Elevator }) {
       }}
     >
       <div className={`door ${elevator.door}`} />
-      <span>{elevator.currentFloor}</span>
+      <span style={{ position: "absolute", top: 0 }}>
+        {elevator.currentFloor}
+      </span>
       <InternalPanel elevatorId={elevator.id} />
     </div>
   );

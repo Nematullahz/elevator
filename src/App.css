@@ -25,20 +25,23 @@ body { background:#0f172a; color:white; }
   right:0;
   top:0;
   left: 400px;
-  width:200px;
+  width:250px;
   height:480px;
   background-color: red;
 }
 
 .elevator {
-  position:absolute;
-  width:60px;
-  height:60px;
-  background:#1e293b;
-  transition:transform .8s linear;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position: absolute;
+  width: 79px;
+  height: 80px;
+  background: linear-gradient(135deg, #23272f 70%, #1e222a 100%);
+  transition: transform .8s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  gap: 20px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.18);
 }
 
 .door.open { background:green; }
@@ -48,7 +51,7 @@ body { background:#0f172a; color:white; }
 
 .panelInside {
   position: absolute;
-  bottom: 4px;
+  bottom: 8px;
   left: 4px;
   display: grid;
   grid-template-columns: repeat(3, 18px);
