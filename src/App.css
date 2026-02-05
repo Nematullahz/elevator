@@ -1,42 +1,265 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* body {
+  margin: 0;
+  font-family: system-ui, Arial;
+  background: #f4f6f8;
+}
+
+.app {
   text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  font-size: 42px;
+  margin-bottom: 30px;
+} */
+
+/* BUILDING LAYOUT */
+/* .building-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+} */
+
+/* FLOORS PANEL */
+/* .floors {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.floor {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+  width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.floor button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  background: #eee;
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+.floor button:hover {
+  background: #ddd;
+} */
+
+/* SHAFTS */
+/* .shafts {
+  display: flex;
+  gap: 40px;
 }
 
-.read-the-docs {
-  color: #888;
+.shaft {
+  width: 140px;
+  height: 480px;
+  border: 3px solid #000;
+  position: relative;
+  background: white;
+} */
+
+/* ELEVATOR CAR */
+/* .elevator {
+  position: absolute;
+  width: 110px;
+  height: 70px;
+  left: 15px;
+  background: #1f2937;
+  border-radius: 10px;
+  transition: transform 2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+} */
+
+/* DOORS */
+/* .doors {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.door {
+  width: 50%;
+  background: #9ca3af;
+  transition: width 1.5s ease;
+}
+
+.door.open {
+  width: 0%;
+} */
+
+/* FLOOR TEXT */
+/* .floor-number {
+  position: absolute;
+  bottom: 4px;
+  font-size: 12px;
+} */
+
+/* CABIN PANEL */
+/* .cabin-panel {
+  position: absolute;
+  right: -55px;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.cabin-panel button {
+  font-size: 10px;
+  padding: 3px;
+} */
+
+body {
+  background: #f0f2f5;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.building {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 90vh;
+  margin: 40px auto;
+  background: #e0e0e0;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 32px 0 0 0;
+  width: 420px;
+  position: relative;
+}
+
+.floors {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 320px;
+  margin-right: 32px;
+}
+
+.floor {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  position: relative;
+  padding: 0 16px;
+}
+
+.floor:last-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.floor-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 40px;
+  color: #555;
+}
+
+.floor-buttons {
+  margin-left: 16px;
+}
+
+.floor-btn {
+  background: linear-gradient(180deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: 1px solid #b0b0b0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin: 0 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.floor-btn:active {
+  background: #d1eaff;
+  transform: scale(0.95);
+}
+
+.elevator-shafts {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  height: 420px;
+  align-items: flex-end;
+  position: relative;
+}
+
+.elevator-shaft {
+  width: 60px;
+  height: 420px;
+  background: #b0b0b0;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.elevator-car {
+  position: absolute;
+  left: 8px;
+  width: 44px;
+  height: 60px;
+  background: linear-gradient(180deg, #e0e0e0 0%, #b0b0b0 100%);
+  border-radius: 8px;
+  border: 2px solid #888;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.elevator-door {
+  width: 40px;
+  height: 56px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  margin: 2px 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 0.5s;
+}
+
+.elevator-door.open .door-left {
+  width: 18px;
+}
+
+.elevator-door.open .door-right {
+  width: 18px;
+}
+
+.door-left, .door-right {
+  background: #e0e0e0;
+  height: 100%;
+  width: 20px;
+  transition: width 0.5s;
+}
+
+.elevator-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #444;
+  margin-top: 2px;
 }
